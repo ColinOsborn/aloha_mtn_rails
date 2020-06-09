@@ -1,3 +1,14 @@
 <h1>All Bikes</h1>
 
+<% if @bikes.empty? %>
+    <h1>No Bikes Created</h1>
+<% else %>
+    <ul>
+    <% @bikes.each do |bike| %>
+        <li><%= link_to bike.name, bike_path(bike) %></li>
+    <% end %>
+    </ul>
+<% end %>
+
+
 <%= link_to "Create New Bike", new_bike_path %>
