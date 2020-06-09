@@ -1,0 +1,23 @@
+<%= form_for(@bike) do |f| %>
+    <% if @bike.errors.any? %>
+        <h2><%= pluralize(@bike.errors.count, "error") %> prohibited this record from being saved:</h2>
+        <ul>
+            <% @bike.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :image_path %>
+    <%= f.text_field :image_path %>
+
+    <%= f.label :demo %>
+    <%= f.check_box :demo, {}, true, false %>
+
+    <%= f.label :rental %>
+    <%= f.check_box :rental, {}, true, false %>
+
+    <%= f.submit %>
+<% end %>
