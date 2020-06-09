@@ -1,5 +1,14 @@
 <h1><%= @bike.name %></h1>
 <%= image_tag @bike.image_path %>
 
-<%= @bike.demo %>
-<%= @bike.rental %>
+<%= form_for(@bike) do |f| %>
+    <% if @bike.demo == true %>
+    <h3>Demo: <%= @bike.demo %></h3>
+    <% end  %>
+<% end %>
+
+<%= form_for(@bike) do |f| %>
+    <% if @bike.rental == true %>
+    <h3>Rental: <%= @bike.demo %></h3>
+    <% end  %>
+<% end %>
