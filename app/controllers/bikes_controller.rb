@@ -27,7 +27,6 @@ class BikesController < ApplicationController
 
     def update
         @bike = Bike.find(params[:id])
-
         if @bike.update(bike_params)
             redirect_to @bike
         else
