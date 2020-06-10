@@ -1,6 +1,6 @@
 
     <h1><%= @bike.name %></h1>
-    <%= image_tag @bike.image_path %>
+    <%= image_tag @bike.image.url(:medium) %>
 
     <%= form_for(@bike) do |f| %>
         <% if @bike.demo == true %>

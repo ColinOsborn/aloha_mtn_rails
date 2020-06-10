@@ -1,4 +1,4 @@
-<%= form_for(@bike) do |f| %>
+<%= form_for(@bike, html: {multipart: true}) do |f| %>
   <% if @bike.errors.any? %>
     <h2><%= pluralize(@bike.errors.count, "error") %> prohibited this record from being saved:</h2>
     <ul>
@@ -11,8 +11,8 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
 
-    <%= f.label :image_path %>
-    <%= f.text_field :image_path %>
+    <%= f.label :image, "Attach a new Image" %>
+    <%= f.file_field :image %>
 
     <%= f.label :demo %>
     <%= f.check_box :demo, {}, true, false %>

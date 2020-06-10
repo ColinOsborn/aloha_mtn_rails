@@ -43,6 +43,6 @@ class BikesController < ApplicationController
     private
 
     def bike_params
-        params.require(:bike).permit(:name, :image_path, :demo, :rental)
+        params.require(:bike).permit(:name, :demo, :rental, :image)
     end
 end
