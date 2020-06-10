@@ -1,17 +1,20 @@
-<h1><%= @bike.name %></h1>
-<%= image_tag @bike.image_path %>
 
-<%= form_for(@bike) do |f| %>
-    <% if @bike.demo == true %>
-    <h3>Demo: <%= @bike.demo %></h3>
-    <% end  %>
-<% end %>
+    <h1><%= @bike.name %></h1>
+    <%= image_tag @bike.image_path %>
 
-<%= form_for(@bike) do |f| %>
-    <% if @bike.rental == true %>
-    <h3>Rental: <%= @bike.demo %></h3>
-    <% end  %>
-<% end %>
+    <%= form_for(@bike) do |f| %>
+        <% if @bike.demo == true %>
+        <h3>Demo: <%= @bike.demo %></h3>
+        <% end  %>
+    <% end %>
 
-<%= link_to "Edit Bike", edit_bike_path(@bike) %>
-<%= link_to "Delete Bike", bike_path(@bike), method: :delete %>
+    <%= form_for(@bike) do |f| %>
+        <% if @bike.rental == true %>
+        <h3>Rental: <%= @bike.demo %></h3>
+        <% end  %>
+    <% end %>
+
+    <%= link_to "Edit Bike", edit_bike_path(@bike), class: 'btn btn-primary btn-lg' %>
+    <%= link_to "Delete Bike", bike_path(@bike), method: :delete, class: 'btn btn-danger btn-lg' %>
+
+
