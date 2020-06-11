@@ -19,6 +19,7 @@ h1 {
     color: #72b4ac;
     font-size: 28px;
     margin: 15px 0 15px;
+    font-weight: bolder;
 }
 h2 {
     color: #ffffff;
@@ -36,19 +37,35 @@ h4 {
     margin-top: 0;
 }
 
+.page-header {
+    color: #72b4ac;
+    font-size: 28px;
+    margin: 15px 0 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+label {
+    color: #ffffff;
+}
+
+input
 
 /* Top Bar Section */
 .nav { 
-    background: #72b4ac;
     color: #fff; 
     padding: 0px 0;
     max-height: 80px;
 }
 
+.top-bar {
+    background: #72b4ac;
+}
+
 img.cc-icon { 
     position: relative;
-    right:35px;
-    top:31px;
+    right: 20px;
+    top: 8px;
 }
 
 .hours { 
@@ -91,10 +108,6 @@ img.cc-icon {
     padding: 0;
     margin: 0;
     font-size: 24px;
-    // position: relative;
-    // bottom: 145px;
-    // left: 85px; ///come back and adress these differently
-    // background:#9A9DA0;
 }
 .main-menu ul li:hover { 
     color: #72b4ac;
@@ -117,16 +130,22 @@ img.cc-icon {
 ul#menu-top-menu { 
     right: -60px;
 }
-#menu-top-menu { 
-    position: relative;
-    top: -128px;
-}
 
-/* Homepage logo */
+/* Homepage */
 img.custom-logo { 
     position: relative;
     right: 80px;
-} 
+}
+
+.homepage {
+    background-image: url(asset_path("sopris.jpg"));
+    background-size: cover;
+    min-height: 500px; 
+}
+
+.homepage-text {
+    padding-top: 50px;
+}
 
 // @media only screen and (max-width: 1024px) {
 //     .main-menu ul li {
@@ -347,13 +366,11 @@ footer {
 }
 
 /* Service Page */
-.page-id-8 .content-area { 
+.content-area { 
     background-image: url(asset_path("service-page.jpg"));
+    background-size: cover;
 }
 
-.page-id-8 .left li { 
-    color: #fff;
-}
 
 // @media only screen and (max-width: 414px) {
 //     .col-md-4.left,
@@ -397,19 +414,6 @@ footer {
 }
 
 /* Bikes Page */
-.page-id-6 p { 
-   padding: 5px 3px 20px;
-   font-size: 14px;
-}
-.page-id-6 .middle-area {
-    padding: 0px 0px 0px;
-}
-.page-id-6 p.revert {
-    font-size: 18px;
-}
-.page-id-6 .footer {
-    position: fixed;
-}
 img.surly-img {
     max-height: 148px;
 }
@@ -417,6 +421,9 @@ img.why-img {
     max-height: 148px;
 }
 img.cervelo-img {
+    max-height: 100px;
+}
+.cervelo-img {
     max-height: 100px;
 }
 img.all-city-img {
@@ -606,24 +613,27 @@ img.all-city-img {
 .contact-img {
     float: right;
     position: relative;
-    bottom: 40px;
+    bottom: -15px;
+    max-height: 375px;
+    right: 20px;
+    left: 50px;
 }
 
 
-@media only screen and (max-width: 768px) {
-    .page-id-16 h2 {
-        text-align: center;
-    }
-    .page-id-16 .middle-area h1 {
-        text-align: center;
-    }
-    .page-id-16 p {
-        text-align: center;
-    }
-    .contact-img {
-        display: none;
-    }
-}
+// @media only screen and (max-width: 768px) {
+//     .page-id-16 h2 {
+//         text-align: center;
+//     }
+//     .page-id-16 .middle-area h1 {
+//         text-align: center;
+//     }
+//     .page-id-16 p {
+//         text-align: center;
+//     }
+//     .contact-img {
+//         display: none;
+//     }
+// }
 
 @media only screen and (max-width: 414px) {
     .contact-img {
