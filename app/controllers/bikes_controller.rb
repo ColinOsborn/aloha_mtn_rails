@@ -11,6 +11,7 @@ class BikesController < ApplicationController
     def create
         @bike = Bike.create(bike_params)
         if @bike.save
+            flash[:success] = "Bike has been created!"
             redirect_to @bike
         else
             render :new

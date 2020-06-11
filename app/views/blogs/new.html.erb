@@ -1,0 +1,16 @@
+<%= form_for(@blog, html: {multipart: true}) do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+
+    <%= f.label :image, "Attach an Image" %>
+    <%= f.file_field :image %>
+
+    <%= f.submit "Create Post", class: 'btn btn-success btn-lg' %>
+<% end %>
+
+
+
