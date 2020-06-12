@@ -1,0 +1,58 @@
+<h1 class="text-center page-header">Edit Blog Post</h1>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@blog, :html => {multipart: true, class: "form-horizontal", role: "form"}) do |f| %>
+      <% if @blog.errors.any? %>
+        <div class="panel panel-danger col-md-offset-1">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+              <%= pluralize(@blog.errors.count, "error") %>
+              prohibited this blog from being saved:
+            </h2>
+            <div class="panel-body">
+              <ul>
+                <% @blog.errors.full_messages.each do |msg| %>
+                <li>
+                  <%= msg %>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label :title %>
+        </div>
+        <div class="col-md-11">
+          <%= f.text_field :title, class: 'form-control', placeholder: "Title of Post", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label :body %>
+        </div>
+        <div class="col-md-11">
+          <%= f.text_area :body, rows: 10, class: 'form-control', placeholder: 'Body of Blog Post' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label "Attach an Image" %>
+        </div>
+        <div class="col-md-11">
+          <%= f.file_field :image, class: 'form-control' %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-offset-1 col-md-11">
+          <%= f.submit "Update Post", class: 'btn btn-success btn-lg pull-right' %>
+        </div>
+      </div>
+      
+    <% end %>
+  </div>
+</div>
