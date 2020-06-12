@@ -1,3 +1,12 @@
-<%= @blog.title %>
-<%= image_tag @blog.image.url(:medium) %>
-<%= @blog.body %>
+<article class="detail-article text-center">
+    <h1 class="article-detail-title text-center"><%= @blog.title %></h1>
+
+    <div class="glyphicon glyphicon-calendar" id="article-date">
+        <p><%= @blog.created_at.strftime("%b %d %Y") %></p>
+    </div>
+
+    <div class="article-body text-center">
+        <%= image_tag @blog.image.url(:medium) %>
+        <p><%= @blog.body %></p>
+    </div>
+</article>
