@@ -13,6 +13,7 @@ class BlogsController <ApplicationController
             flash[:success] = "Post has been created!"
             redirect_to @blog
         else
+            flash.now[:danger] = "A failure has occured. Article has not been created"
             render :new
         end
     end
