@@ -1,4 +1,4 @@
-<h1 class="text-center page-header">New Blog Post</h1>
+<h1 class="text-center page-header">Edit Blog Post</h1>
 <br>
 <div class="row">
   <div class="col-md-12">
@@ -10,7 +10,6 @@
               <%= pluralize(@blog.errors.count, "error") %>
               prohibited this blog from being saved:
             </h2>
-            
             <div class="panel-body">
               <ul>
                 <% @blog.errors.full_messages.each do |msg| %>
@@ -50,7 +49,7 @@
       
       <div class="form-group">
         <div class="col-md-offset-1 col-md-11">
-          <%= f.submit "Create Post", class: 'btn btn-success btn-lg pull-right' %>
+          <%= f.submit "Update Post", class: 'btn btn-success btn-lg pull-right' %>
         </div>
       </div>
       

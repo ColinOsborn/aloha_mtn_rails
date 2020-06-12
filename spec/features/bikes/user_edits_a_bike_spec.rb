@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "User edits the bike info" do
     scenario "The bike is no longer a demo or rental of info is incorrect" do
 
-        @bike1 = Bike.create(name: "Kona Hei Hei CR/DL", image_path: "https://images.konaworld.com/2020/med/hei_hei_cr_dl.jpg", rental: true, demo: false)
+        @bike1 = Bike.create(name: "Kona Hei Hei CR/DL", image_file_name: "hei_hei_cr.jpg", rental: true, demo: false)
 
         visit bikes_path
 

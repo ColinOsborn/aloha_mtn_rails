@@ -14,17 +14,17 @@ RSpec.feature "Creating blog posts" do
         # expect(page.current_path).to eq(blogs_path)
     end
 
-    # scenario "A user tries to create an invalid article" do
-    #     visit "/"
-    #     click_link "New Article"
+    scenario "A user tries to create an invalid article" do
+        visit "/blogs"
+        click_link "New Blog Post"
 
-    #     fill_in "Title", with: ""
-    #     fill_in "Body", with: ""
+        fill_in "Title", with: ""
+        fill_in "Body", with: ""
 
-    #     click_button "Create Post"
+        click_button "Create Post"
 
-    #     expect(page).to have_content("A failure has occured. Article has not been created")
-    #     expect(page).to have_content("Title can't be blank")
-    #     expect(page).to have_content("Body can't be blank")
-    # end
+        expect(page).to have_content("A failure has occured. Blog Post has not been created")
+        expect(page).to have_content("Title can't be blank")
+        expect(page).to have_content("Body can't be blank")
+    end
 end
