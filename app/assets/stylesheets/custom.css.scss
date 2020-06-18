@@ -422,6 +422,12 @@ footer {
 img.surly-img {
     max-height: 148px;
 }
+.surly-img {
+    max-height: 148px;
+}
+.niner-img {
+    max-height: 148px;
+}
 img.why-img {
     max-height: 148px;
 }
@@ -470,11 +476,16 @@ img.all-city-img {
 .three-of-three {
     float: left;
     width: 33.33%;
+    padding-bottom: 40px;
 }
 
 .container-top {
     display: table;
     width: 100%;
+}
+
+.bike-lines-p {
+    margin: 5px;
 }
 
 // @media only screen and (max-width: 1024px) {
