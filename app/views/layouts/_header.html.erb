@@ -6,7 +6,19 @@
                     <a href="https://www.carbondale.com/visit/things-to-do/" target="_blank"><img class="cc-icon" src="https://drncvpyikhjv3.cloudfront.net/sites/109/2016/08/31123954/logo.png" alt="Town of Carbondale" width='32' height='32'></a>
 
                     </div>
-                    <div class="hours col-xl-12 col-md-12 col-sm-12 col-8 text-right">Open MON-FRI 10am - 7pm | SAT 9am - 5pm | SUN 10am - 5am | <a class="phone" href="tel:+19709632500">970-963-2500</a></div>
+                    <div class="hours col-xl-12 col-md-12 col-sm-12 col-8 text-right">Open MON-FRI 10am - 7pm | SAT 9am - 5pm | SUN 10am - 5am | <a class="phone" href="tel:+19709632500">970-963-2500</a>
+                    
+                        <div id="container">
+                            <h6>
+                                <% if logged_in? %>
+                                <p><%= "Logged in as #{current_user.email}" %></p>
+                                <%= link_to "(logout)", logout_path %>
+                                <% else %>
+                                <%= link_to "(login)", login_path %>
+                                <% end %>
+                            </h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

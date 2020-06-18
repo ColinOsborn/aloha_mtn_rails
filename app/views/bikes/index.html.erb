@@ -1,4 +1,5 @@
 
+<% if logged_in? %>
     <h1 class="page-header">All Bikes</h1>
 
     <% if @bikes.empty? %>
@@ -11,8 +12,8 @@
         </ul>
     <% end %>
 
-
     <%= link_to "Create New Bike", new_bike_path, class: 'btn btn-primary btn-lg' %>
+<% end %>
 
 <div class=container>
     <h1 class="text-center page-header">Bikes we Sell</h1>

@@ -1,4 +1,5 @@
 class BikesController < ApplicationController
+    before_action :require_login, except: [:index]
 
     def index
         @bikes = Bike.all
