@@ -32,6 +32,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'sorcery'
 
+#Adding webpacker for JavaScript library mangement
+gem 'webpacker', '~> 5.x'
+
+#React gem for Rails
+gem 'react-rails'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

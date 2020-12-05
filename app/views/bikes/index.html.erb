@@ -6,6 +6,7 @@
         <h1>No Bikes Created</h1>
     <% else %>
         <ul>
+        <%= react_component("Bike", { name: bike.name }) %>
         <% @bikes.each do |bike| %>
             <li><%= link_to bike.name, bike_path(bike) %></li>
         <% end %>
@@ -15,74 +16,4 @@
     <%= link_to "Create New Bike", new_bike_path, class: 'btn btn-primary btn-lg' %>
 <% end %>
 
-<div class=container>
-    <h1 class="text-center page-header">Bikes we Sell</h1>
-    <br>
-    <p class="text-center">At Aloha we only carry the stuff that we believe in. We stock are models that we think are the best for riding in our area, but we’re always happy to order whatever tickles your fancy.</p>
-    <br>
-</div>
-<div class="container">
-    <div class="bike-brands">
-        <div class="container">
-            <div class="container-top">
-                <div class="one-of-three">
-                    <div class="bike-lines"><a href="http://www.bikes.com/" target="_blank"><img class="rocky-img"><%= image_tag('brand-logos/rocky-logo.png') %></a>
-                    </div>
-                    <p class="bike-lines-p">Rocky Mountain Bicycles is a Canadian company that helped define freeride mountain biking.  By staffing former spomsored pro riders, they insure that every bike they design has top level rider input and will help you have the ride of your life. </p>
-                </div>
-                <div class="two-of-three">
-                    <div class="bike-lines"><a href="http://www.konaworld.com/" target="_blank"><img class="kona-img"><%= image_tag('brand-logos/kona_logo.png') %></a>
-                    </div>
-                    <p class="bike-lines-p">Our favorite all-around bike company, Kona makes a bike for any use or user. Mountain, road,
-                        cross, commute, or kids… Every single Kona we throw a leg over fits great and feels ready to
-                        shred, right out of the box.</p>
-                </div>
-                <div class="three-of-three">
-                    <div class="bike-lines"><a href="https://www.moots.com/" target="_blank"><img class="moots-img"><%= image_tag('brand-logos/moots-logo.png') %></a>
-                    </div>
-                    <p class="bike-lines-p">Very few companies have the cycling heretige that Moots has.  Located just two hours away in beautiful Steamboat Springs, Moots designs, fabricates, and produces all of their bikes from top grade USA sourced titanium.  If you want a bicycle that will feel like you have been riding it for twenty years the first time you ever throw a leg over it, you want a Moots. </p>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="container-middle">
-            <div class="one-of-three">
-                <div class="bike-lines"><a href="http://www.salsacycles.com/" target="_blank"><img class="salsa-img"><%= image_tag('brand-logos/salsa-logo.png') %></a>
-                </div>
-                <p class="bike-lines-p">Salsa is adventure by bike. This is the company that has helped create fat bike racing, bikepacking, and gravel racing. If you want a bike for your next cycling adventure, look no further than Salsa.</p>
-            </div>
-            <div class="two-of-three">
-                <div class="bike-lines"><a href="https://surlybikes.com/" target="_blank"><img class="surly-img"><%= image_tag('brand-logos/surly-images.png', class:"surly-img") %></a>
-                </div>
-                <p class="bike-lines-p">Surly is functional steel with soul. This Minnesota company has been on the forefront of bicycle design, but have always stayed true to their steel roots.</p>
-            </div>
-            <div class="three-of-three">
-                <div class="bike-lines"><a href="https://www.whycycles.com/" target="_blank"><img class="why-img"><%= image_tag('brand-logos/why-logo.png', class:"why-img") %></a>
-                </div>
-                <p class="bike-lines-p">Why Cycles is a small bike company located right here in Carbondale that specializes in beautiful ti bikes with progressive geometry that makes them ride as good as they look.</p>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="container-bottom">
-        <br>
-            <div class="one-of-three">
-                <div class="bike-lines"><a href="https://www.cervelo.com/en_US/" target="_blank"><img class="cervelo-img"><%= image_tag('brand-logos/cervelo.png', class:"cervelo-img") %></a>
-                </div>
-                    <p class="bike-lines-p">From the pro peloton to the Hawaii Ironman World Championships, Cervelo is the leader in road and triathlon aerodynamic bicycle technology.</p> 
-            </div>
-            <div class="two-of-three">
-                <div class="bike-lines"><a href="https://ninerbikes.com/" target="_blank"><img class="niner-img"><%= image_tag('brand-logos/niner-logo.png', class:"niner-img") %></a>
-                </div>
-                    <p class="bike-lines-p">Niner Bikes started the whole twenty nine inch wheel revolution and now make everything from full suspension and hardtail mountain bikes to carbon & steel gravel grinders.</p>
-            </div>
-            <div class="three-of-three">
-                <div class="bike-lines"><a href="https://allcitycycles.com/" target="_blank"><img class="all-city-img"><%= image_tag('brand-logos/allcity_logo.png', class:"all-city-img") %></a>
-                   </div>
-                <p class="bike-lines-p">All-City Cycles is committed to the concept of "Steel is Real"!  Their bikes are not only beautiful, but they ride like a dream.</p>
-            </div>
-        </div>
-    </div>
-</div>
+<%= render 'layouts/brands' %> 
