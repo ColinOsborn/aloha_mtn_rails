@@ -31,7 +31,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'sorcery'
-gem 'webpacker', '~> 3.3'
+
+#Adding webpacker for JavaScript library mangement
+gem 'webpacker', '~> 5.x'
+
+#React gem for Rails
+gem 'react-rails'
 
 
 # Use ActiveStorage variant
